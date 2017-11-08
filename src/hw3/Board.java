@@ -7,7 +7,7 @@
 
 package hw3;
 
-public class Board implements Comparable{
+public class Board{
 	//properties
 		private int[] board;
 		private int state_id;
@@ -106,13 +106,11 @@ public class Board implements Comparable{
 			String s = "";
 			for(int i = 0; i < 9; i = i + 3){
 				for(int k = i; k < i + 3; k++){
-					s += board[k] + "|";
-			
+					s += board[k] + "|";		
 				}
 				if(i!= 6)
 					s += "\n------\n";
 			}
-
 			return s;
 		}
 		

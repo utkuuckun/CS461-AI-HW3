@@ -27,8 +27,7 @@ public class Generator {
 	public Board[] Generate()
 	{
 		for(int i = 0; i < stateCount ; i++)
-		{
-			
+		{		
 			int[] values = states[i].applyFunction();
 			int[] newBoard = new int[9];
 			for(int j = 0; j < states[i].getMaxNumOfNeigb(); j++)

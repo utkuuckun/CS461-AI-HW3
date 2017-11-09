@@ -59,10 +59,13 @@ public class Board{
 			int diff = 0;
 			for(int i = 0; i < 9; i++)
 			{
-				int t = Math.abs(goalBoard.findPos(board[i]) - i);
-				diff += (t/3) + (t % 3);
+				if( board[i] != 0)
+				{
+					int t = Math.abs(goalBoard.findPos(board[i]) - i);
+					diff += (t/3) + (t % 3);
+				}
 			}
-			dist = diff/2;
+			dist = diff;
 		}
 		
 		public int[] getNeighbours() {
